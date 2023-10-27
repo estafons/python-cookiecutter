@@ -1,6 +1,6 @@
 # SciFY's Python Cookiecutter
 
-This cookiecutter template lets us create a brand new python project using cookiecutter!
+A simple python-cookiecutter template to start a brand new python project. This cookiecutter template lets us create a brand new python project using cookiecutter!
 
 # Try it out! 
 Install cookiecutter:
