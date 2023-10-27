@@ -17,3 +17,9 @@ cookiecutter gh:scify/python-cookiecutter
 ```
 
 All set!
+
+
+
+# What is Cookiecutter?
+
+A command-line utility that creates projects from cookiecutters (project templates), e.g. creating a Python package project from a Python package project template.
