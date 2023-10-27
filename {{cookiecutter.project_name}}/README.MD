@@ -13,8 +13,17 @@ In this README you will also find some useful commands.
 ## Setup Dev Environment
 
 1. Install dependencies
+on active environment:
 ```
 pip install -r requirements-dev.txt
+```
+on poetry:
+```
+poetry add $( cat requirements-dev.txt )
+```
+on pipenv:
+```
+pipenv install -r requirements-dev.txt
 ```
 2. Install pre-commit hooks
 ```
