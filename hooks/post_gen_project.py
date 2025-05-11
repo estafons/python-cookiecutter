@@ -1,6 +1,6 @@
 # hooks/post_gen_project.py
 
-def print_readme_section(start_marker, end_marker, readme_path="README.md"):
+def print_readme_section(start_marker, end_marker, readme_path="README.MD"):
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
