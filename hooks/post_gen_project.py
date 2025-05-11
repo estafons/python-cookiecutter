@@ -21,5 +21,5 @@ def print_readme_section(start_marker, end_marker, readme_path="README.MD"):
 
 
 if __name__ == "__main__":
-    print("\n📘 \033[1;34mHighlighted Setup Instructions:\033[0m\n")
+    print("\n📘 \033[1;34mSetup Instructions:\033[0m\n")
     print_readme_section("<!-- FIRST STEPS -->", "<!-- END FIRST STEPS -->")
