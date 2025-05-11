@@ -24,9 +24,9 @@ pre-commit install
 
 For more information about the available tools, check the README.MD in the root directory.
 
-You are all Set! :rocket:
-
 <!-- END FIRST STEPS -->
+
+You are all Set! :rocket:
 
 ## Usefull Commands
 
