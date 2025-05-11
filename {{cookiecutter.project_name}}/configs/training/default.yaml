@@ -1,0 +1,8 @@
+training:
+  batch_size: 64
+  epochs: 50
+  seed: 42
+  use_gpu: true
+  log_interval: 10
+  early_stopping: true
+  checkpoint_path: outputs/checkpoints

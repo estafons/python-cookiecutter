@@ -10,27 +10,23 @@ This cookiecutter sets up a basic python environment. Specifically, it holds the
 
 In this README you will also find some useful commands.
 
-## Setup Dev Environment
+<!-- FIRST STEPS -->
+## Setup Environment
 
-1. Install dependencies
-on active environment:
+1. Create conda environment:
 ```
-pip install -r requirements-dev.txt
-```
-on poetry:
-```
-poetry add $( cat requirements-dev.txt )
-```
-on pipenv:
-```
-pipenv install -r requirements-dev.txt
+conda env create -f environment.yaml
 ```
 2. Install pre-commit hooks
 ```
 pre-commit install
 ```
 
+For more information about the available tools, check the README.MD in the root directory.
+
 You are all Set! :rocket:
+
+<!-- END FIRST STEPS -->
 
 ## Usefull Commands
 
@@ -77,6 +73,71 @@ Run hooks without need for commit:
 ```
 pre-commit run --all-files
 ```
+
+## 🛠 Hydra Configuration Structure
+
+This project uses [Hydra](https://hydra.cc) to manage configurations in a structured, modular, and composable manner. Hydra enables easy experimentation, hyperparameter tuning, and separation of concerns between components like the model, training loop, and runtime settings.
+
+To run with default configs:
+
+```bash
+python main.py
+```
+To override a value:
+```bash
+python main.py model.hidden_dim=256
+```
+### 📁 Directory Layout
+
+Hydra configurations are stored under the `configs/` directory with a clear separation between different concerns:
+
+configs/
+├── config.yaml # Root configuration entry point
+├── model/
+│ └── mlp.yaml # Model-specific configuration
+├── training/
+│ └── default.yaml # Training hyperparameters
+
+
+### 📌 Configuration Structure
+
+- `config.yaml`: Root config that defines the defaults and entry point. It imports all other configurations.
+- `model/mlp.yaml`: Defines model-specific parameters such as hidden dimensions, dropout rate, and activation function.
+- `training/default.yaml`: Contains training hyperparameters like `batch_size`, `epochs`, and general runtime options (e.g., `seed`, `use_gpu`).
+
+
+### 🧩 Why Structure Matters
+
+Keeping configurations **modular and organized** improves maintainability and reproducibility:
+
+- You can independently modify model, training, or logging settings.
+- You avoid deeply nested or hard-coded settings in code files.
+- It becomes easier to compare experiments or set up sweeps.
+
+
+### 🔄 Overriding Configurations
+
+Hydra supports **runtime overrides** from the command line. You can modify any setting without changing the base config files:
+
+```bash
+python main.py training.batch_size=128 model.hidden_dim=512
+```
+You can also override entire config files:
+```
+python main.py model=cnn training=fast
+```
+This composability is one of Hydra’s strongest features—use it to keep your experiments clean, trackable, and reproducible.
+
+### ✅ Next Steps
+
+Once your configs are in place:
+
+    Define new model/, training/, or other component files as needed.
+
+    Use the @hydra.main decorator in your entry script to load the configuration.
+
+    Rely on the DictConfig object (from omegaconf) to access all parameters inside your application logic.
+
 
 
 ## References
