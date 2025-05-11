@@ -13,7 +13,7 @@ pip install cookiecutter
 
 Create a project from the template:
 ```
-cookiecutter git@github.com:estafons/python-cookiecutter.git
+cookiecutter git@github.com:estafons/python-cookiecutter.git --checkout deep-learning
 ```
 
 All set!
