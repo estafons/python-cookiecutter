@@ -44,12 +44,12 @@ conda activate {{ cookiecutter.project_name }}
 pre-commit install
 ```
 
-<!-- END FIRST STEPS -->
-
 4. Run documentation
 ```bash
 mkdocs serve
 ```
+
+<!-- END FIRST STEPS -->
 
 ## Documentation
 
