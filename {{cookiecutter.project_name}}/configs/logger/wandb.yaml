@@ -1,7 +1,12 @@
 _target_: wandb.init
+
 project: ${oc.env:WANDB_PROJECT,{{cookiecutter.project_name}}}
 entity: ${oc.env:WANDB_ENTITY,null}
-mode: ${oc.env:WANDB_MODE,online}
+
+# DEFAULT = offline
+mode: ${oc.env:WANDB_MODE,offline}
+
 name: ${task}_${model.name}_${data.name}
 tags: ${tags}
-dir: .
+
+dir: ${paths.root_dir}/wandb

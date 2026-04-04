@@ -38,11 +38,6 @@ pip install -e .
 ```bash
 pre-commit install
 ```
-
-5. (Optional) configure W&B:
-```bash
-wandb login
-```
 <!-- END FIRST STEPS -->
 
 ## What this template includes
