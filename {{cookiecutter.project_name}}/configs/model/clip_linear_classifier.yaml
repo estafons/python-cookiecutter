@@ -1,4 +1,0 @@
-name: clip_linear_classifier
-builder: clip_linear_classifier
-pretrained_model_name: openai/clip-vit-base-patch32
-freeze_backbone: true

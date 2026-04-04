@@ -1,8 +1,0 @@
-# @package _global_
-
-defaults:
-  - override /task: classification
-  - override /model: baseline_classifier
-  - override /data: dataset_a
-
-tags: ["classification", "baseline", "dataset_a"]

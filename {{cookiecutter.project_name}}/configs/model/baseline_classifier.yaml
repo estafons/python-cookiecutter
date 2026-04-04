@@ -1,3 +1,0 @@
-name: baseline_classifier
-builder: baseline_classifier
-hidden_dim: 64

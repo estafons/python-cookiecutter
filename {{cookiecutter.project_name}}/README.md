@@ -39,21 +39,37 @@ conda env create -f environment.yaml
 conda activate {{ cookiecutter.project_name }}
 ```
 
-3. Install the project in editable mode:
-```bash
-pip install -e .
-```
-
-4. Install pre-commit hooks:
+3. Install pre-commit hooks:
 ```bash
 pre-commit install
 ```
 
-5. (Optional) configure W&B:
-```bash
-wandb login
-```
 <!-- END FIRST STEPS -->
+
+4. Run documentation
+```bash
+mkdocs serve
+```
+
+## Documentation
+
+This project includes local documentation powered by MkDocs.
+
+After installing the environment, run:
+
+```bash
+mkdocs serve
+```
+
+Then open the local URL shown in the terminal, usually:
+
+`http://127.0.0.1:8000`
+
+Start with:
+
+  - Getting Started
+  - Architecture
+  - Use Cases
 
 ## What this template includes
 

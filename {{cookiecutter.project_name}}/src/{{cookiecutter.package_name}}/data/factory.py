@@ -2,23 +2,17 @@ from omegaconf import DictConfig
 
 
 def build_data(cfg: DictConfig) -> dict:
-    if cfg.task.name != "classification":
-        raise ValueError(f"Unsupported task for data factory: {cfg.task.name}")
+    """
+    Build task-compatible data objects.
 
-    if cfg.data.builder == "dataset_a":
-        return {
-            "train_data": [(i, i % cfg.data.num_classes) for i in range(100)],
-            "test_data": [(i, i % cfg.data.num_classes) for i in range(20)],
-            "num_classes": cfg.data.num_classes,
-            "input_dim": cfg.data.input_dim,
-        }
+    This starter template intentionally does not ship with concrete datasets.
+    Follow the docs to add your first dataset and register it here.
+    """
+    if cfg.task.name == "classification":
+        raise NotImplementedError(
+            "No classification dataset is registered yet. "
+            "Add one in src/<package>/data/, create its config in configs/data/, "
+            "and register it in build_data()."
+        )
 
-    if cfg.data.builder == "dataset_b":
-        return {
-            "train_data": [(i, i % cfg.data.num_classes) for i in range(200)],
-            "test_data": [(i, i % cfg.data.num_classes) for i in range(40)],
-            "num_classes": cfg.data.num_classes,
-            "input_dim": cfg.data.input_dim,
-        }
-
-    raise ValueError(f"Unsupported dataset builder: {cfg.data.builder}")
+    raise ValueError(f"Unsupported task for data factory: {cfg.task.name}")
