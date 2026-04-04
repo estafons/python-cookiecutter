@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.project_name}}"
+version = "0.1.0"
+description = "Project generated from cookiecutter template"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff.lint]
+# Enable linting rules.
+# See: https://bookstack.scify.org/books/guides-howtos/page/description-notes-on-ruff-linting-rules
+select = ["E", "F", "UP", "S", "C90", "N", "BLE", "A", "T20", "RET", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools}/*" = ["S"]

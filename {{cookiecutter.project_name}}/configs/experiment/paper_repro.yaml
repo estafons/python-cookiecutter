@@ -1,0 +1,11 @@
+# @package _global_
+
+tags: ["paper", "repro"]
+
+seed: 1234
+
+trainer:
+  max_epochs: 100
+
+logger:
+  project: paper-reproduction

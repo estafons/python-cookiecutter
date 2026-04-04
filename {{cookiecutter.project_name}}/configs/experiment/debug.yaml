@@ -1,0 +1,10 @@
+# @package _global_
+
+tags: ["debug"]
+
+trainer:
+  max_epochs: 1
+  batch_size: 8
+
+logger:
+  mode: offline
