@@ -1,0 +1,5 @@
+name: dataset_b
+builder: dataset_b
+root: ${paths.data_dir}/dataset_b
+num_classes: 3
+input_dim: 32

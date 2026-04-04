@@ -1,16 +1,14 @@
-name: {{cookiecutter.project_name}}
+name: {{ cookiecutter.project_name }}
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python={{cookiecutter.python_version}}
+  - python={{ cookiecutter.python_version }}
   - pip
   - pip:
-      - hydra-core  
+      - hydra-core
       - omegaconf
-      - torch
-
-  - black
-  - pre-commit
-  - isort
-  - ruff
+      - wandb
+      - ruff
+      - black
+      - isort
+      - pre-commit

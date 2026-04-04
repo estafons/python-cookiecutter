@@ -1,8 +1,9 @@
 {
-    "project_name": "SciFY",
-    "python_version": "3.12",
-    "_copy_without_render": [
-        "requirements-dev.txt",
-        ".github/*"
-    ]
+  "project_name": "SciFY",
+  "package_name": "scify",
+  "python_version": "3.12",
+  "_copy_without_render": [
+    "requirements-dev.txt",
+    ".github/*"
+  ]
 }

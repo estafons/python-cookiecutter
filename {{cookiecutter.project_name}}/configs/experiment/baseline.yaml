@@ -1,8 +1,0 @@
-# @package _global_
-
-tags: ["baseline"]
-
-trainer:
-  max_epochs: 20
-  batch_size: 64
-  lr: 1e-3

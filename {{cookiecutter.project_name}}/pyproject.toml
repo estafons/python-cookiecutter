@@ -3,12 +3,16 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "{{cookiecutter.project_name}}"
+name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
-description = "Project generated from cookiecutter template"
+description = "Hydra + W&B research template"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "hydra-core",
+    "omegaconf",
+    "wandb",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -17,8 +21,6 @@ where = ["src"]
 profile = "black"
 
 [tool.ruff.lint]
-# Enable linting rules.
-# See: https://bookstack.scify.org/books/guides-howtos/page/description-notes-on-ruff-linting-rules
 select = ["E", "F", "UP", "S", "C90", "N", "BLE", "A", "T20", "RET", "SIM"]
 
 [tool.ruff.lint.per-file-ignores]

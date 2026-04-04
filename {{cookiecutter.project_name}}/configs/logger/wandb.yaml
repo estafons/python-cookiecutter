@@ -1,23 +1,7 @@
 _target_: wandb.init
-
 project: ${oc.env:WANDB_PROJECT,{{cookiecutter.project_name}}}
 entity: ${oc.env:WANDB_ENTITY,null}
-mode: ${oc.env:WANDB_MODE,online}   # online, offline, disabled
-name: ${task_name}_${model.name}_${now:%Y-%m-%d_%H-%M-%S}
-group: null
-job_type: train
+mode: ${oc.env:WANDB_MODE,online}
+name: ${task}_${model.name}_${data.name}
 tags: ${tags}
-notes: ${notes}
-
-dir: ${hydra.runtime.output_dir}
-reinit: false
-save_code: true
-
-config:
-  task_name: ${task_name}
-  seed: ${seed}
-  data: ${data}
-  model: ${model}
-  trainer: ${trainer}
-  callbacks: ${callbacks}
-  extras: ${extras}
+dir: .

@@ -1,20 +1,12 @@
 defaults:
   - _self_
-  - data: mnist
-  - model: mlp
-  - trainer: gpu
+  - model: baseline
+  - data: dataset_a
+  - trainer: default
   - logger: none
-  - callbacks: default
   - paths: default
-  - hydra: default
-  - extras: default
-  - experiment: baseline
 
-task_name: train
-tags: []
+task: train
 seed: 42
-
-train: true
-test: false
-
-notes: null
+ckpt_path: null
+tags: []

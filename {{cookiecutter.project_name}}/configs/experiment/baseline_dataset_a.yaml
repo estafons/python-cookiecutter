@@ -1,0 +1,8 @@
+# @package _global_
+
+defaults:
+  - override /model: baseline
+  - override /data: dataset_a
+
+task: train
+tags: ["baseline", "dataset_a"]
