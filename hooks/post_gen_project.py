@@ -1,5 +1,3 @@
-# hooks/post_gen_project.py
-
 from pathlib import Path
 
 
@@ -12,13 +10,13 @@ def print_readme_section(start_marker, end_marker, readme_path="README.md"):
         for line in lines:
             if start_marker in line:
                 inside_section = True
-                print("\033[1;36m")  # Bright cyan
+                print("\033[1;36m")
                 continue
             if end_marker in line and inside_section:
-                print("\033[0m")  # Reset formatting
+                print("\033[0m")
                 break
             if inside_section:
-                print(f"\033[1m{line.rstrip()}\033[0m")  # Bold line
+                print(f"\033[1m{line.rstrip()}\033[0m")
     except FileNotFoundError:
         print(f"\033[91m{readme_path} not found.\033[0m")
 
@@ -28,6 +26,7 @@ def ensure_init_files(root: Path) -> None:
         "src/{{cookiecutter.package_name}}/__init__.py",
         "src/{{cookiecutter.package_name}}/data/__init__.py",
         "src/{{cookiecutter.package_name}}/models/__init__.py",
+        "src/{{cookiecutter.package_name}}/tasks/__init__.py",
         "src/{{cookiecutter.package_name}}/utils/__init__.py",
     ]:
         p = root / rel

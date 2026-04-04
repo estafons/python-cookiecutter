@@ -1,13 +1,10 @@
 from omegaconf import DictConfig
 
-from src.{{cookiecutter.package_name}}.train import train
-from src.{{cookiecutter.package_name}}.test import test
+from src.{{cookiecutter.package_name}}.tasks.classification import run_classification
 
 
 def run(cfg: DictConfig) -> None:
-    if cfg.task == "train":
-        train(cfg)
-    elif cfg.task == "test":
-        test(cfg)
+    if cfg.task.name == "classification":
+        run_classification(cfg)
     else:
-        raise ValueError(f"Unsupported task: {cfg.task}")
+        raise ValueError(f"Unsupported task: {cfg.task.name}")

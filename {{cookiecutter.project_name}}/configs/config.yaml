@@ -1,12 +1,12 @@
 defaults:
   - _self_
-  - model: baseline
+  - task: classification
+  - model: baseline_classifier
   - data: dataset_a
   - trainer: default
-  - logger: none
+  - logger: wandb
   - paths: default
 
-task: train
 seed: 42
 ckpt_path: null
 tags: []

@@ -1,8 +1,0 @@
-# @package _global_
-
-defaults:
-  - override /model: my_model
-  - override /data: dataset_b
-
-task: train
-tags: ["my_model", "dataset_b"]

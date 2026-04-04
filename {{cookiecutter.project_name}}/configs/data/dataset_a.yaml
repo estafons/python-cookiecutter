@@ -1,4 +1,5 @@
 name: dataset_a
+task: classification
 builder: dataset_a
 root: ${paths.data_dir}/dataset_a
 num_classes: 2

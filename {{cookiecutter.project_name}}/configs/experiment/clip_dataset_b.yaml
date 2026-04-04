@@ -1,0 +1,8 @@
+# @package _global_
+
+defaults:
+  - override /task: classification
+  - override /model: clip_linear_classifier
+  - override /data: dataset_b
+
+tags: ["classification", "clip", "dataset_b"]

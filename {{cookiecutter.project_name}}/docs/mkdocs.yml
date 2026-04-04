@@ -1,0 +1,13 @@
+site_name: Research Template Docs
+site_description: Task-aware Hydra + W&B project documentation
+theme:
+  name: material
+nav:
+  - Home: docs/index.md
+  - Getting Started: docs/getting_started.md
+  - Architecture: docs/architecture.md
+  - Use Cases:
+      - Add a Model: docs/use_cases/add_model.md
+      - Add a Dataset: docs/use_cases/add_dataset.md
+      - Add a Task: docs/use_cases/add_task.md
+      - Zero-shot MNIST with CLIP: docs/use_cases/mnist_clip_zeroshot.md

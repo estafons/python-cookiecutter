@@ -1,6 +1,6 @@
 {
-  "project_name": "SciFY",
-  "package_name": "scify",
+  "project_name": "astro_slerp",
+  "package_name": "astro_slerp",
   "python_version": "3.12",
   "_copy_without_render": [
     "requirements-dev.txt",

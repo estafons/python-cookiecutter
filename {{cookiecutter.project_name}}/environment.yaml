@@ -2,7 +2,7 @@ name: {{ cookiecutter.project_name }}
 channels:
   - conda-forge
 dependencies:
-  - python={{ cookiecutter.python_version }}
+  - python=3.12
   - pip
   - pip:
       - hydra-core
@@ -12,3 +12,5 @@ dependencies:
       - black
       - isort
       - pre-commit
+      - mkdocs
+      - mkdocs-material

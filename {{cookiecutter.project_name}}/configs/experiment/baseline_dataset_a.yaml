@@ -1,8 +1,8 @@
 # @package _global_
 
 defaults:
-  - override /model: baseline
+  - override /task: classification
+  - override /model: baseline_classifier
   - override /data: dataset_a
 
-task: train
-tags: ["baseline", "dataset_a"]
+tags: ["classification", "baseline", "dataset_a"]
